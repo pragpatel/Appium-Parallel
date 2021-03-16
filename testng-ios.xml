@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="Suite for ios in parallel" parallel="tests" >
+  <test name="test on iPhone 8 " >
+  <parameter name="deviceName" value="iPhone 8"> </parameter>
+  <parameter name="udid" value="7FC12D34-2139-4889-8EF7-CE2BC22888C7"> </parameter>
+  <parameter name="appiumServer" value="http://0.0.0.0:4725/wd/hub"> </parameter> 
+  <parameter name="wdaLocalPort" value="8100"> </parameter>
+    <classes>
+       <class name="test.BaseClassTwo" />
+    </classes>
+  </test>
+  <test name="test on iPhone 8 Plus" >
+  <parameter name="deviceName" value="iPhone 8 Plus"> </parameter>  
+  <parameter name="udid" value="C968DED0-BDA4-49FE-916D-73D2C95EF6D3"> </parameter>
+  <parameter name="appiumServer" value="http://0.0.0.0:4723/wd/hub"> </parameter>
+  <parameter name="wdaLocalPort" value="8200"> </parameter>
+    <classes>
+       <class name="test.BaseClassTwo" />
+    </classes>
+  </test>
+</suite>
+

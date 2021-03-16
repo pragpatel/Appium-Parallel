@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="Suite for android in parallel" parallel="tests" >
+  <test name="test on Pixel_4 " >
+  <parameter name="avd" value="Pixel_4"> </parameter>
+  <parameter name="appPackage" value="com.android.calculator2"> </parameter>
+  <parameter name="appActivity" value="com.android.calculator2.Calculator"> </parameter>
+  <parameter name="appiumServer" value="http://0.0.0.0:4725/wd/hub"> </parameter>
+    <classes>
+       <class name="test.BaseClassOne" />
+    </classes>
+  </test>
+  <test name="test on Pixel_3" >
+  <parameter name="avd" value="Pixel_3"> </parameter>  
+  <parameter name="appPackage" value="com.android.calculator2"> </parameter>
+  <parameter name="appActivity" value="com.android.calculator2.Calculator"> </parameter>
+  <parameter name="appiumServer" value="http://0.0.0.0:4723/wd/hub"> </parameter>
+    <classes>
+       <class name="test.BaseClassOne" />
+    </classes>
+  </test>
+</suite>
+
